@@ -46,7 +46,7 @@ func init() {
 	}
 }
 func main() {
-	log, err := logger.New(serviceName, logger.Options{Format: logger.SyslogLogFormat, DebugLevel: isDebug})
+	log, err := logger.New(serviceName, logger.Options{Format: logger.SyslogLogFormat})
 	if err != nil {
 		fmt.Println("Logger Init Failed", err.Error())
 		os.Exit(1)
